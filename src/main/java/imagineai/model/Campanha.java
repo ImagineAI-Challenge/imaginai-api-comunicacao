@@ -1,18 +1,16 @@
 package imagineai.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.mapping.FieldType;
-import org.springframework.data.mongodb.core.mapping.MongoId;
+import org.springframework.data.mongodb.core.mapping.*;
 
 @Document(collection = "campanhas")
 public class Campanha {
     @MongoId(FieldType.OBJECT_ID)
     private String id;
 
+    @DBRef
     @Field(name = "id_historia")
-    private int idHistoria;
-
+    private Historia historia;
+    
     private String campanha;
 
     @Field(name = "imagens")
@@ -21,9 +19,9 @@ public class Campanha {
     public Campanha() {
     }
 
-    public Campanha(String id, int idHistoria, String campanha, String[] imagens) {
+    public Campanha(String id, Historia historia, String campanha, String[] imagens) {
         this.id = id;
-        this.idHistoria = idHistoria;
+        this.historia = historia;
         this.campanha = campanha;
         this.imagens = imagens;
     }
@@ -36,12 +34,12 @@ public class Campanha {
         this.id = id;
     }
 
-    public int getIdHistoria() {
-        return idHistoria;
+    public Historia getIdHistoria() {
+        return historia;
     }
 
-    public void setIdHistoria(int idHistoria) {
-        this.idHistoria = idHistoria;
+    public void setIdHistoria(Historia historia) {
+        this.historia = historia;
     }
 
     public String getCampanha() {
