@@ -1,10 +1,12 @@
 package imagineai.controller;
 
 import imagineai.service.BaseService;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Service
 public abstract class BaseController<T, ID> {
     private final BaseService<T, ID> service;
 

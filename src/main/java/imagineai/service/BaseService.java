@@ -1,10 +1,12 @@
 package imagineai.service;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public abstract class BaseService<T, ID> {
     private final MongoRepository<T, ID> repository;
 
