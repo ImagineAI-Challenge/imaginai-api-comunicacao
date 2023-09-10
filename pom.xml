@@ -8,10 +8,10 @@
 		<version>3.1.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>imagineai-api-comunicacao</groupId>
-	<artifactId>imagineai-api-comunicacao</artifactId>
+	<groupId>imaginai-api-comunicacao</groupId>
+	<artifactId>imaginai-api-comunicacao</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>imagineai-api-comunicacao</name>
+	<name>imaginai-api-comunicacao</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -46,6 +46,12 @@
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
 			<version>4.1.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mindrot</groupId>
+			<artifactId>jbcrypt</artifactId>
+			<version>0.4</version>
 		</dependency>
 
 		<dependency>

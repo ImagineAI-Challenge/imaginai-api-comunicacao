@@ -7,15 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="imagineai-api-comunicacao" />
+        <module name="imaginai-api-comunicacao" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="imagineai" target="17" />
+      <module name="imagineai-api-comunicacao" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="imaginai-api-comunicacao" options="-parameters" />
       <module name="imagineai" options="-parameters" />
       <module name="imagineai-api-comunicacao" options="-parameters" />
     </option>
