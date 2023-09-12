@@ -1,11 +1,10 @@
 package imagineai.controller;
 
+import imagineai.dto.PromptDTO;
+import imagineai.dto.PromptRespostaDTO;
 import imagineai.service.GptService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/gpt")
@@ -14,8 +13,8 @@ public class GptController {
     @Autowired
     public GptService gptService;
 
-    @GetMapping("/prompt")
-    public String prompt(@RequestBody String prompt){
+    @PostMapping("/prompt")
+    public PromptRespostaDTO prompt(@RequestBody PromptDTO prompt){
         return gptService.getOpenAiResponse(prompt);
     }
 }
