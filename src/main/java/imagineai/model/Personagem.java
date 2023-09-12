@@ -11,7 +11,7 @@ public class Personagem {
     @Field(name = "id_historia")
     private Historia historia;
 
-    private String[] personagens;
+    private String nome;
 
     @Field(name = "historia_personagem")
     private String historiaPersonagem;
@@ -22,10 +22,10 @@ public class Personagem {
     public Personagem() {
     }
 
-    public Personagem(String id, Historia historia, String[] personagens, String historiaPersonagem, String imagemPersonagem) {
+    public Personagem(String id, Historia historia, String nome, String historiaPersonagem, String imagemPersonagem) {
         this.id = id;
         this.historia = historia;
-        this.personagens = personagens;
+        this.nome = nome;
         this.historiaPersonagem = historiaPersonagem;
         this.imagemPersonagem = imagemPersonagem;
     }
@@ -46,12 +46,12 @@ public class Personagem {
         this.historia = historia;
     }
 
-    public String[] getPersonagens() {
-        return personagens;
+    public String getNome() {
+        return nome;
     }
 
-    public void setPersonagens(String[] personagens) {
-        this.personagens = personagens;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getHistoriaPersonagem() {
