@@ -1,3 +1,8 @@
+## URLs relevantes
+- [Vídeo de explicação do projeto em geral](https://www.youtube.com/watch?v=wf3xPOcDF8E)
+- [Projeto de IA geradora de mapas](https://github.com/ImagineAI-Challenge/imaginai-api-MagGen-IA-App)
+- [Frontend em react-native](https://github.com/ImagineAI-Challenge/imaginai-front)
+
 # imaginai-api-comunicacao
 
 Para testar a integração com o GPT, primeiro é necessário configurar a sua API_KEY
