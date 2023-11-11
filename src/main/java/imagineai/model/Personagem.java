@@ -19,15 +19,21 @@ public class Personagem {
     @Field(name = "imagem_personagem")
     private String imagemPersonagem;
 
+    private String raca;
+
+    private String classe;
+
     public Personagem() {
     }
 
-    public Personagem(String id, Historia historia, String nome, String historiaPersonagem, String imagemPersonagem) {
+    public Personagem(String id, Historia historia, String nome, String historiaPersonagem, String imagemPersonagem, String raca, String classe) {
         this.id = id;
         this.historia = historia;
         this.nome = nome;
         this.historiaPersonagem = historiaPersonagem;
         this.imagemPersonagem = imagemPersonagem;
+        this.raca = raca;
+        this.classe = classe;
     }
 
     public String getId() {
@@ -69,5 +75,22 @@ public class Personagem {
     public void setImagemPersonagem(String imagemPersonagem) {
         this.imagemPersonagem = imagemPersonagem;
     }
+
+    public String getRaca() {
+        return raca;
+    }
+
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+
+    public String getClasse() {
+        return classe;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+
 }
 
