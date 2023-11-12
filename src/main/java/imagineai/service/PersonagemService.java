@@ -20,8 +20,8 @@ public class PersonagemService extends BaseService<Personagem, String> {
 
     public Personagem create(PersonagemDTO personagemDTO) {
         Personagem entity = parseDTOtoEntity(personagemDTO);
-        String prompt = "Escreva uma pequena história para um personagem que seja da raça " + entity.getRaca() + ", da classe " + entity.getClasse() + " que se chame " + entity.getNome();
-        PromptDTO promptDTO = new PromptDTO(prompt, 500);
+        String prompt = "Escreva uma pequena história bem resumida para um personagem que seja da raça " + entity.getRaca() + ", da classe " + entity.getClasse() + " que se chame " + entity.getNome();
+        PromptDTO promptDTO = new PromptDTO(prompt, 250);
         PromptRespostaDTO response = gptService.getOpenAiResponse(promptDTO);
         entity.setHistoriaPersonagem(response.gptResponse());
         return super.create(entity);
