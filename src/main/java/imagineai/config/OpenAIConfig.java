@@ -5,6 +5,7 @@ import com.theokanning.openai.service.OpenAiService;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.Duration;
 import java.util.Properties;
 
 public class OpenAIConfig {
@@ -13,7 +14,7 @@ public class OpenAIConfig {
 
     public static OpenAiService getInstance(){
         if(instance == null){
-            instance = new OpenAiService(API_KEY);
+            instance = new OpenAiService(API_KEY, Duration.ofMinutes(5));
         }
         return instance;
     }

@@ -26,7 +26,7 @@ public class GptService {
                 .build();
 
         String text = service.createCompletion(completionRequest).getChoices().get(0).getText();
-        return new PromptRespostaDTO(text);
+        return new PromptRespostaDTO(text.replace(prompt.prompt()+"\n\n", ""));
     }
 
 }

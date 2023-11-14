@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public abstract class BaseController<T, ID> {
-    private final BaseService<T, ID> service;
+    final BaseService<T, ID> service;
 
     public BaseController(BaseService<T, ID> service) {
         this.service = service;
