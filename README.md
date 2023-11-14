@@ -1,5 +1,6 @@
 ## URLs relevantes
-- [Vídeo de explicação do projeto em geral](https://www.youtube.com/watch?v=wf3xPOcDF8E)
+- ~[Vídeo de explicação do projeto em geral](https://www.youtube.com/watch?v=wf3xPOcDF8E) (Sprint 03)~
+- [Video com uma explicação breve do projeto bem como demonstração do funcionamento](https://www.youtube.com/watch?v=8rPGuNSa_C8) (Sprint 04)
 - [Projeto de IA geradora de mapas](https://github.com/ImagineAI-Challenge/imaginai-api-MagGen-IA-App)
 - [Frontend em react-native](https://github.com/ImagineAI-Challenge/imaginai-front)
 
@@ -18,6 +19,40 @@ Para se conectar no projeto, é necessário criar uma imagem docker com os coman
 ```bash
 docker pull mongo:4.4
 docker run -d -p 27017:27017 -e AUTH=no --name banco_mongodb mongo:4.4
+```
+## Sprint 04 - Resumo geral
+
+No planejamento que fizemos na sprint 03, a arquitetura geral do projeto seria a da imagem abaixo. Acabou  que não integreamos a API geradora de imagens ao projeto. É uma funcionalidade dificil de se implementar e não conseguimos entregá-la nessa sprint.
+
+![image](https://github.com/ImagineAI-Challenge/imaginai-api-comunicacao/assets/101985616/636ab555-22e9-4079-b4ef-a9f1b12dd7d5)
+
+### Criação de personagem
+
+De novidade nessa sprint nós temos, principalmente, o endpoint de criação de personagem. Ele reebe o nome, raca e classe e monta uma requisição para o GPT pedindo que faça uma história para esse personagem. Essa história é colocada na entidade e guardada no banco. Sendo possível consulta-la posteriormente.
+
+**Endpoint**
+
+`POST`/gpt/personagem
+
+**Corpo da requisição**
+
+```json
+{
+  "nome": "Fulano",
+  "raca": "Humano",
+  "classe": "Guerreiro"
+}
+```
+**Resposta**
+
+```json
+{
+  "nome": "Fulano",
+  "raca": "Humano",
+  "classe": "Guerreiro",
+  "historiaPersonagem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisl euismod, aliquam nisl quis, ultricies nisl. Sed vitae nisl euismod, aliquam nisl quis, ultricies nisl. Sed vitae nisl euismod, aliquam nisl quis, ultricies nisl. Sed vitae nisl euismod, aliquam nisl quis, ultricies nisl. Sed vitae nisl euismod, aliquam nisl quis, ultricies nisl.",
+  "id":"23K5B235LJV23"
+}
 ```
 
 ## Sobre a API
